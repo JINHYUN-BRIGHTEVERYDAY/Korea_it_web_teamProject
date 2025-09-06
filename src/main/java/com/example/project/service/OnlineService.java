@@ -30,6 +30,8 @@ public class OnlineService {
 //        return products;
 //    }
 
+    // 2025.09.06
+    // postman에 실행 완료
     public List<OnlineProductDto> getProducts(String spec) {
         List<OnlineProductDto> products = new ArrayList<>();
         products.add(new OnlineProductDto("CPU i5 12400", 200_000, "https://shopping.naver.com/product/123"));
