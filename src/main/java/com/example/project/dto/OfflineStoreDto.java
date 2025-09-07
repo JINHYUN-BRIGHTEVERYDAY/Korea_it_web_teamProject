@@ -1,23 +1,40 @@
 package com.example.project.dto;
 
+
 public class OfflineStoreDto {
     private String name;
     private String distance;
-    private int priceExample;
+    private int price;
 
-    public OfflineStoreDto(String name, String distance, int priceExample) {
+    public OfflineStoreDto() {}
+
+    public OfflineStoreDto(String name, String distance, int price) {
         this.name = name;
         this.distance = distance;
-        this.priceExample = priceExample;
+        this.price = price;
     }
 
-    // Getter & Setter
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return name;
+    }
 
-    public String getDistance() { return distance; }
-    public void setDistance(String distance) { this.distance = distance; }
+    public String getDistance() {
+        return distance;
+    }
 
-    public int getPriceExample() { return priceExample; }
-    public void setPriceExample(int priceExample) { this.priceExample = priceExample; }
+    public int getPrice() {
+        return price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }

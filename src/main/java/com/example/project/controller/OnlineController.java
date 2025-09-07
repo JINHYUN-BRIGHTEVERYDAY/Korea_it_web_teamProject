@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/online")
@@ -21,14 +20,9 @@ public class OnlineController {
         this.onlineService = onlineService;
     }
 
-    @PostMapping("/api/online")
+    // POST /api/online/search
+    @PostMapping("/search")
     public List<OnlineProductDto> getOnlineProducts(@RequestBody GptRequestDto request) {
         return onlineService.getProducts(request.getSpec());
     }
-
-//    @PostMapping
-//    public List<Map<String, Object>> getOnlineProducts(@RequestBody Map<String, String> request) {
-//        String spec = request.get("spec");
-//        return onlineService.getProducts(spec);
-//    }
 }
