@@ -3,13 +3,11 @@ package com.example.project.controller;
 import com.example.project.dto.GptRequestDto;
 import com.example.project.dto.GptResponseDto;
 import com.example.project.service.GptService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/gpt")
+@CrossOrigin(origins = "http://localhost:5173")
 public class GptController {
 
     private final GptService gptService;
